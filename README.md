@@ -131,8 +131,9 @@ python device_sim/sim_client.py
 
 This allows the software components to be developed and tested independently from the physical device.
 
-<img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/61123329-dff8-4594-91a8-f09b395fdaec" />
-
+<p align="center">
+  <img src="dashboard.png" alt="RFID Energy Management Dashboard" width="900">
+</p>
 
 The dashboard provides a user-facing interface for interacting with and monitoring the system.
 
