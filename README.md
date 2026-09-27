@@ -15,7 +15,7 @@ It consists of four major components:
 - **Device simulator** – enables development and testing without physical hardware
 - **Dashboard** – provides a user-facing interface for monitoring and management
 
-### System Architecture
+## 🏗️ System Architecture
 
 ```text
                     ┌─────────────────────┐
@@ -34,44 +34,58 @@ It consists of four major components:
                     │   FastAPI Backend   │
                     │                     │
                     │  API / Data Models  │
-                    │  Business Logic     │
+                    │  Business Logic    │
                     └──────────┬──────────┘
                                │
                   ┌────────────┴────────────┐
                   │                         │
                   ▼                         ▼
-        ┌─────────────────┐       ┌─────────────────┐
-        │    Dashboard    │       │  Device Simulator│
-        │                 │       │                 │
-        │ Monitoring/UI   │       │ Testing/Debugging│
-        └─────────────────┘       └─────────────────┘
+        ┌─────────────────┐       ┌──────────────────┐
+        │    Dashboard    │       │ Device Simulator │
+        │                 │       │                  │
+        │ Monitoring / UI │       │ Testing / Debug  │
+        └─────────────────┘       └──────────────────┘
+```
 
-✨ Key Features
-RFID-based identification
-ESP32-based device integration
-FastAPI REST backend
-Device simulation for development and testing
-Real-time system monitoring
-Dashboard-based visualization
-Structured backend data models
-Hardware-to-backend communication
-Modular architecture for future expansion
-🛠️ Technology Stack
-Backend
-Python
-FastAPI
-REST APIs
-Hardware / Embedded
-ESP32
-RFID
-Embedded C/C++
-Frontend / Dashboard
-Python-based dashboard
-Development & Testing
-Device simulation
-Git
-GitHub
-📁 Project Structure
+## ✨ Key Features
+
+- RFID-based identification
+- ESP32-based device integration
+- FastAPI REST backend
+- Device simulation for development and testing
+- Real-time system monitoring
+- Dashboard-based visualization
+- Structured backend data models
+- Hardware-to-backend communication
+- Modular architecture for future expansion
+
+## 🛠️ Technology Stack
+
+### Backend
+
+- Python
+- FastAPI
+- REST APIs
+
+### Hardware / Embedded
+
+- ESP32
+- RFID
+- Embedded C/C++
+
+### Frontend / Dashboard
+
+- Python-based dashboard
+
+### Development & Testing
+
+- Device simulation
+- Git
+- GitHub
+
+## 📁 Project Structure
+
+```text
 AI-Powered-RFID-Energy-Management/
 │
 ├── backend/
@@ -89,108 +103,141 @@ AI-Powered-RFID-Energy-Management/
 ├── esp32_firmware/
 │   └── esp32_rfid_energy.ino
 │
+├── dashboard.png
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-⚙️ Getting Started
-1. Clone the repository
+```
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/varuntej-21/AI-Powered-RFID-Energy-Management.git
 cd AI-Powered-RFID-Energy-Management
-2. Create a virtual environment
+```
 
-Windows:
+### 2. Create a Virtual Environment
 
+#### Windows
+
+```powershell
 python -m venv .venv
 .venv\Scripts\activate
+```
 
-Linux / macOS:
+#### Linux / macOS
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
-3. Install dependencies
+```
+
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ Running the Backend
+```
 
-Start the FastAPI application using:
+## ▶️ Running the Backend
 
+Start the FastAPI application:
+
+```bash
 uvicorn backend.main:app --reload
+```
 
 The API will be available at:
 
+```text
 http://127.0.0.1:8000
+```
 
-FastAPI's interactive API documentation can be accessed at:
+FastAPI's interactive API documentation:
 
+```text
 http://127.0.0.1:8000/docs
-🧪 Device Simulation
+```
+
+## 🧪 Device Simulation
 
 The project includes a device simulator that can be used to test the backend without requiring the physical ESP32/RFID hardware.
 
-
+```bash
 python device_sim/sim_client.py
+```
 
 This allows the software components to be developed and tested independently from the physical device.
 
+## 📊 Project Dashboard
+
 <p align="center">
-  <img src="dashboard.png" alt="RFID Energy Management Dashboard" width="900">
+  <img src="./dashboard.png" alt="RFID Energy Management Dashboard" width="900">
 </p>
 
 The dashboard provides a user-facing interface for interacting with and monitoring the system.
 
 Run:
 
+```bash
 python dashboard/app.py
+```
 
-The exact command may vary depending on the dashboard framework and configuration.
+> The exact command may vary depending on the dashboard framework and configuration.
 
-🔌 Hardware
+## 🔌 Hardware
 
 The embedded component is located in:
 
+```text
 esp32_firmware/esp32_rfid_energy.ino
+```
 
 The ESP32 is responsible for interfacing with the RFID hardware and communicating system information to the backend.
 
-🔐 Security
+## 🔐 Security
 
 Sensitive credentials and local configuration should not be committed to the repository.
 
-The project .gitignore excludes:
+The project `.gitignore` excludes:
 
-Environment variables
-Virtual environments
-Local databases
-Logs
-IDE-specific files
-Python cache files
-🔮 Future Enhancements
+- Environment variables
+- Virtual environments
+- Local databases
+- Logs
+- IDE-specific files
+- Python cache files
+
+## 🔮 Future Enhancements
 
 Potential future improvements include:
 
-AI-based energy consumption prediction
-Intelligent anomaly detection
-Automated energy optimization
-Advanced analytics
-Role-based access control
-Cloud deployment
-Real-time notifications
-IoT device fleet management
-Predictive maintenance
-🎯 Project Goals
+- AI-based energy consumption prediction
+- Intelligent anomaly detection
+- Automated energy optimization
+- Advanced analytics
+- Role-based access control
+- Cloud deployment
+- Real-time notifications
+- IoT device fleet management
+- Predictive maintenance
+
+## 🎯 Project Goals
 
 The project demonstrates how embedded hardware, RFID identification, backend APIs, device simulation, and monitoring interfaces can be integrated into a single IoT platform.
 
 It is structured to support future development toward intelligent, data-driven energy management.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Varuntej Kurakula
+**Varuntej Kurakula**
 
 AI/ML Engineer | Embedded & IoT Systems
 
-GitHub:
+GitHub:  
 https://github.com/varuntej-21
 
-📄 License
+## 📄 License
 
 This project is available for educational and development purposes.
